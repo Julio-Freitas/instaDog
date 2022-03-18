@@ -8,4 +8,4 @@
 - Ready, enjoy in
   - http://localhost:3000
 
-(Congratulations)[https://www.origamid.com/]
+[Congratulations](https://www.origamid.com/)
