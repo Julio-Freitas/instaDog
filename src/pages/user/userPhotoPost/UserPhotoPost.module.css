@@ -1,0 +1,70 @@
+.photoPost {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 0px;
+}
+
+.photoPost .img-container {
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+    border-radius: 5rem;
+    overflow: hidden;
+}
+.photoPost img {
+    max-width: 100%;
+    object-fit: cover;
+    object-position: top;
+    width: 250px;
+    height: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.img-preview {
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.img-preview::after {
+    content: " ";
+    display: block;
+    height: 0;
+    padding-bottom: 100%;
+}
+
+.button-upload {
+    cursor: pointer;
+    border: 1px solid #fba;
+    padding: 0.5rem 1rem;
+    border-radius: 3px;
+    margin-bottom: 1rem;
+    display: inline-block;
+}
+
+.button-upload:hover {
+    animation: gradient 5s ease infinite;
+    background: linear-gradient(-45deg, #fb1, rgb(238, 147, 10), #fb5);
+    background-size: 300%;
+    color: #fff;
+    font-weight: bold;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.button-upload::after {
+    content: "+";
+    display: inline-block;
+    margin-left: 3px;
+}
+.button-upload input {
+    display: none;
+}

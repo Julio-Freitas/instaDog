@@ -1,0 +1,47 @@
+.feed-list{
+    display: grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap: 10px;
+    justify-content: center;
+}
+
+
+
+.feed-item {
+    display: grid;
+    border-radius: .2rem;
+    cursor: pointer;
+}
+
+.feed-item img{
+    grid-area: 1/1;
+  
+}
+
+.feed-view {
+    background-color: rgba(0, 0, 0, 0.322);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: 1/1;
+    transition: all .5s;
+    opacity: 0;
+}
+.feed-item:hover .feed-view {
+    opacity: 1;
+}
+
+.feed-item:hover .feed-view::before {
+    content: " ";
+    display: inline-flex;
+    background: url("../../assets/visualizacao.svg") center center no-repeat;
+    width: 16px;
+    height: 16px;
+    margin-right: .2rem;
+}
+
+.feed-item:nth-child(2) {
+    grid-column: 2 / 4;
+    grid-row: span 2;
+}

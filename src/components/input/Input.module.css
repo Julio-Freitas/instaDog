@@ -1,0 +1,38 @@
+.wrapper-input {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+.label {
+    font-size: 1.6rem;
+    margin-bottom: 5px;
+    line-height: 1;
+    color: #e68c0f
+}
+
+.input {
+    border: 1px solid #eee;
+    display: block;
+    width: 100%;
+    font-size: 1.6rem;
+    border-radius:.4rem ;
+    background-color: #eee;
+    padding: .5rem;
+    transition: all .5s
+}
+
+.input::placeholder {
+    color: #fa1
+}
+.input:focus,
+.input:hover {
+    outline: none;
+    border-color: #fb1;
+    background-color: #fff;
+    box-shadow: 0 0 0 1px #fea, 0 0 0 1.5px #fa1;
+}
+
+.span-error {
+    color: #f32;
+    font-size: 1.2rem;
+}

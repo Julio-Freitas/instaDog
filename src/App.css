@@ -1,38 +1,98 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,300;1,200;1,300&display=swap');
+
+
+ul,li{
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a{
+  text-decoration: none;
+  color: #333
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+img{
+  display: block;
+  max-width: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+button {
+  cursor: pointer;
+}
+
+button, input{
+  font-size: 1rem;
+  display: block;
+  color: #333
+}
+
+
+h1,h2,h3,h4,h5,h6{
+  font-size: 1.6rem;
+  font-family: 'Spectral', serif
+}
+
+.container {
+  max-width: 100rem;
+  margin: 15px  auto 0 auto;
+  margin: 15px  auto 0 auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  min-height: calc(100vh + 70px);
 }
 
-.App-link {
-  color: #61dafb;
+.content {
+  flex:1;
+  margin-top: 6.4rem;
+  background: rgba(255, 0, 0, 0.014);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
+.title {
+  font-weight: bold;
+  line-height: 1;
+  font-size: 3rem;
+  margin: 1rem 0;
+  position: relative;
+  text-transform: capitalize;
+}
+
+.title::after{
+  content: " ";
+  display: block;
+  width: 2.5rem;
+  height:1rem;
+  background-color: #fb1;
+}
+
+.loading {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border:5px solid gray;
+  border-right-color: transparent;
+  animation: loadingAnimate 2s infinite;
+
+}
+
+
+@keyframes loadingAnimate {
+  to{
     transform: rotate(360deg);
   }
+}
+
+
+.animateLeft {
+  opacity: 0;
+  transform: translateX(-20px);
+  animation: animeLeft 0.3s forwards;
+}
+
+@keyframes animeLeft {
+  to {
+    opacity: 1;
+    transform: initial;
+  }
+  
 }

@@ -1,0 +1,84 @@
+.commentsForm {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: stretch;
+}
+
+.commentsForm textarea {
+    display: block;
+    width: 100%;
+    border: none;
+    resize: none;
+    font-size: 1.2rem;
+    border: 1px solid #eee;
+    border-radius: 0.1rem;
+    padding: 1rem;
+    transition: all 0.2s ;
+}
+
+
+.commentsForm textarea:focus,
+
+.commentsForm textarea:hover {
+    outline: none;
+    border-color: #fb1;
+    background-color: #fff;
+    box-shadow: 0 0 0 1px #fb1;
+}
+
+.commentsForm button {
+    cursor: pointer;
+    border-radius: 0.1rem;
+    border: 1px solid #eee;
+    background: transparent;
+    font-size: 1.2rem;
+    padding: 0 1rem;
+    overflow: hidden;
+    transition: all 0.2s ;
+}
+
+.commentsForm button:hover,
+.commentsForm button:focus {
+    outline: none;
+}
+
+.commentsForm button:hover svg path,
+.commentsForm button:focus svg path{
+    fill: #fb1;
+    stroke: #fea;    
+
+
+}
+.commentsForm button:hover svg {
+    animation: anitemeSvgMoveHead 0.8s  infinite;
+}
+
+
+.commentsForm button:hover svg g{  
+    transform: scale(.9);
+    animation: anitemeSvgLatir 0.8s  infinite;
+    transition: all 0.2s ;
+}
+
+@keyframes anitemeSvgMoveHead {
+    from {
+        transform: rotate(-5deg)
+    }
+    to {
+        transform: rotate(0deg)
+
+    }
+    
+}
+
+@keyframes anitemeSvgLatir {
+    from {
+        opacity: 0;
+        transform: scale(.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+    
+}

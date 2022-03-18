@@ -1,0 +1,94 @@
+.navlink {
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+}
+
+.navlink[data-show-menu-mobile="false"] {
+    display: none
+}
+
+.navlink[data-show-menu-mobile="true"] {
+    display: flex;
+}
+
+.navlink[data-menu-mobile="true"] {
+    position: absolute;
+    right: 10px;
+    top: 60px;
+    flex-direction: column;
+}
+
+.navlink[data-menu-mobile="true"] a,
+.navlink[data-menu-mobile="true"] button{
+    width: 100%;
+}
+
+.navlink a, .navlink button, .button-menu-mobile  {
+    padding: 2px;
+    background-color: #eee;
+    border-radius: .2rem;
+    display:flex;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    border: 1px solid transparent;
+    transition:.5s;
+    margin: 0;
+    cursor: pointer;
+}
+
+
+.navlink a:hover,
+.navlink a:focus,
+.navlink button:hover,
+.navlink button:focus   {
+    background-color: #fff;
+    box-shadow: 0 0 0 3px #eee;
+    outline: none;
+    border-color: #333;
+}
+
+.navlink a:global(.active) {
+    background-color: #fff;
+    box-shadow: 0 0 0 3px #fea;
+    border-color: #fb1;
+}
+
+.navlink a:global(.active) svg > * {
+    fill: #fb1;
+}
+
+
+.header-nav  button > svg > * {
+    fill: #fff;
+}
+
+
+
+.button-menu-mobile::after {
+    content: '';
+    display: flex;
+    width: 100%;
+    height: 2px;
+    background-color: currentColor;
+    box-shadow:  0 6px 0 currentColor, 0 -6px 0 currentColor;
+    transition: all 0.5s;
+}
+
+
+.button-menu-mobile:focus,
+.button-menu-mobile:hover {
+    box-shadow:  0 0 0 3px #fea;
+    border-color: #fb1;
+    color: #fb1;
+}
+
+.button-menu-mobile[data-active="true"]::after {
+ transform: rotate(90deg);
+ width: 5px;
+ height: 5px;
+ box-shadow:  0 10px 0 currentColor, 0 -10px 0 currentColor;
+ border-radius: 50%;
+}

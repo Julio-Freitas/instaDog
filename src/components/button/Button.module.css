@@ -1,0 +1,28 @@
+.button {
+    font-size:2rem;
+    cursor: pointer;
+    border: none;
+    border-radius:5px;
+    background-color: #fa1;
+    padding: 8px 35px;
+    box-sizing: border-box;
+    margin: 5px 0 0;
+    color: #333
+}
+
+.button:hover,
+.button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px #fea, 0 0 0 3.5px #fa1;
+    transition: all .8s;
+    background-color: #fa5;
+}
+
+.button:disabled,
+.button[data-loading="true"] {
+    opacity: .5;
+}
+
+.button[data-loading="true"] {
+    cursor: wait;
+}

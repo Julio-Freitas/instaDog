@@ -1,0 +1,100 @@
+
+.produto {
+    display:  grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.produto-info{
+    margin-top: 15px;
+}
+
+.produto-info h2, .produto-info p {
+    margin-bottom: 5px;
+}
+
+.produto-info .preco {
+    font-weight: bold;
+    color: #212121
+
+}
+.produto-info .descricao{
+    font-size: 18px;
+    color: #212121
+}
+
+.produto-info button {
+    padding: 10px 30px;
+    font-size: 12px;
+    background-color: #008CBA;
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+} 
+
+.produto-info button:hover {
+    font-weight: bold;
+    font-size: 11px;
+}
+
+.produto-info button::after,
+.produto-info button::before  {
+    content: " ";
+    display: block;
+    width:0;
+    height: 0;
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    z-index: 0;
+}
+
+.produto-info button::after{
+    border-top: 1px solid #004156;
+    border-bottom: 1px solid #004156;
+}
+
+.produto-info button::before{
+    border-left: 1px solid #004156;
+    border-right: 1px solid #004156;
+}
+
+.produto-info button:hover::after{
+    width: 100%;
+    height: 100%;
+    transition: width 250ms
+}
+
+.produto-info button:hover::before {
+    width: 100%;
+    height: 100%;
+    transition: height 250ms
+}
+
+
+
+.produto-info button:disabled {
+    background-color: #e7e7e7;
+    color: #222;
+    pointer-events: none;
+}
+
+.fotos-slider img{
+    max-width: 100%;
+    flex: 1;
+}
+
+.fotos-slider{
+    max-width:400px;
+    display: flex;
+    flex-shrink: 0;
+    gap: 10px;
+    overflow: hidden;
+}
+
+
+.active-slider {
+    transition: transform 0.3s ease;
+}

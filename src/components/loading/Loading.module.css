@@ -1,0 +1,37 @@
+.loading {
+    position:fixed;
+    width:100vw;
+    height:100vh;
+    left:0;
+    top: 0;
+    z-index: 20000;
+    background-color: rgba(0, 0,0, .3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.loading  svg {
+    transform: scale(0.7);
+    animation: Loading .5s infinite alternate;
+}
+
+.loading  svg path {
+    fill: #fb1;
+
+}
+
+.loading svg g {
+    opacity: 0;
+    transform: scale(0.9);
+    animation: Loading .5s infinite alternate;
+}
+
+@keyframes Loading {
+    to {
+        opacity: initial;
+        transform: initial
+    }
+}
+

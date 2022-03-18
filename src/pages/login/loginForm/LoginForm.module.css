@@ -1,0 +1,39 @@
+.form {
+    margin-bottom: 2.5rem
+}
+
+.lost {
+    display: inline-block;
+    color: #666;
+    padding: 1rem 0;
+    line-height: 1
+}
+
+.lost::after {
+    content: " ";
+    display: block;
+    height:2px;
+    width: 100%;
+    background-color: currentColor
+}
+.create-account {
+    margin-top: 4rem;
+}
+.create-account p {
+    margin: 2rem 0 2rem 0;
+    font-size: 1.8rem;
+}
+
+.subtitle{
+    line-height: 1;
+    font-size: 3rem;
+}
+
+.subtitle::after {
+    content: " ";
+    display: block;
+    background-color: #ddd;
+    height:.5rem;
+    width: 3rem;
+    border-radius: 2rem;
+}

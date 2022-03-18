@@ -1,0 +1,54 @@
+
+
+.header {
+  padding: 1rem;
+  position: fixed;
+  left: 0;
+  top:0;
+  width: 100%;
+  z-index: 100;
+  box-shadow: 0 1px 1px rgba(0,0,0, .1);
+  background: #fff;
+}
+
+.nav-header {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+  height: 4.4rem
+}
+
+
+.nav-header a {
+  font-size: 1.6rem;
+  color: #333;
+}
+
+.nav-header .logo{
+  text-decoration: none;
+  border-radius: 2px;
+
+}
+
+.nav-header .login::after{
+  content: "";
+
+}
+
+
+.nav-header a:hover {
+    background-color: #fff;
+    transition: all 0.5s;
+    color: #000;
+}
+
+.user-logged {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.user-logged {
+  text-decoration: underline;
+}

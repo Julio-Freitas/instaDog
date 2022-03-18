@@ -1,0 +1,20 @@
+.contact {
+  display: flex;
+  gap: 15px;
+}
+
+.contact-img {
+  width: 350px;
+  height: 350px;
+  background-color: gray;
+  border-radius:3px
+}
+
+.contact-info{
+  margin-top: 15px
+}
+
+.contact-info label {
+  display: block;
+  margin-top: 15px
+}
